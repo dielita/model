@@ -1,0 +1,14 @@
+data:
+  repo: git@github.com:team/data-repo.git
+  path: data/titanic.dvc
+  rev: "HEAD"               # можно менять через dvc exp run
+  name: titanic
+
+features:
+  columns: ["Pclass", "Sex_male", "SibSp", "Parch"]
+
+model:
+  type: random_forest
+  n_estimators: 200
+  max_depth: 5
+  random_state: 1

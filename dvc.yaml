@@ -1,0 +1,30 @@
+stages:
+
+  #import_data:
+    #cmd: dvc import \
+         # ${data.repo} \
+ #         ${data.path} \
+#          --rev ${data.rev} \
+ #         -o data/titanic.dvc
+#    deps:
+ #     - params.yaml
+#    outs:
+#      - data/titanic.dvc
+
+  train:
+    cmd: python src/train.py
+    deps:
+      - src/train.py
+      - data/titanic.csv
+      - params.yaml
+    outs:
+      - models/
+
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+      - src/evaluate.py
+      - models/
+      - params.yaml
+    outs:
+      - metrics/
