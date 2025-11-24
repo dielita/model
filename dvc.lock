@@ -5,12 +5,12 @@ stages:
     deps:
     - path: data/titanic.csv
       hash: md5
-      md5: 8bc3cb70c5e436849cbd56ee12d5ca1c
-      size: 34466
+      md5: e21b73f34506b5860eaed8240ff96d0c
+      size: 33580
     - path: params.yaml
       hash: md5
-      md5: 30b3bed8a4ae45157b8f3463c8bc7f77
-      size: 319
+      md5: 4da44056d843b7e00481c7d2144bf55c
+      size: 320
     - path: src/train.py
       hash: md5
       md5: c7cd99b268da0edd68de573e0a59232d
@@ -18,21 +18,21 @@ stages:
     outs:
     - path: models/
       hash: md5
-      md5: 663786e61832fa47105c2a68c686798b.dir
-      size: 3865529
+      md5: 78aa11006dcf6c346cda1c1c468077b7.dir
+      size: 4284729
       nfiles: 1
   evaluate:
     cmd: python src/evaluate.py
     deps:
     - path: models/
       hash: md5
-      md5: 663786e61832fa47105c2a68c686798b.dir
-      size: 3865529
+      md5: 78aa11006dcf6c346cda1c1c468077b7.dir
+      size: 4284729
       nfiles: 1
     - path: params.yaml
       hash: md5
-      md5: 30b3bed8a4ae45157b8f3463c8bc7f77
-      size: 319
+      md5: 4da44056d843b7e00481c7d2144bf55c
+      size: 320
     - path: src/evaluate.py
       hash: md5
       md5: e6da068d871cd6fd3e5e9a21d80e6d51
@@ -40,6 +40,6 @@ stages:
     outs:
     - path: metrics
       hash: md5
-      md5: 7f12893a6385b6f479fe43a14199097e.dir
-      size: 38
+      md5: 26552323b134c5eeb5e7226c940787a9.dir
+      size: 37
       nfiles: 1

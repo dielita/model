@@ -12,5 +12,5 @@ features:
 model:
   type: random_forest
   n_estimators: 300
-  max_depth: 9
+  max_depth: 10
   random_state: 42
