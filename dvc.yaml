@@ -26,5 +26,5 @@ stages:
       - src/evaluate.py
       - models/
       - params.yaml
-    outs:
-      - metrics/
+    metrics:
+      - metrics

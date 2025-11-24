@@ -9,37 +9,37 @@ stages:
       size: 34466
     - path: params.yaml
       hash: md5
-      md5: 0573b806949b5eb6711d398c38b3724f
-      size: 318
+      md5: 30b3bed8a4ae45157b8f3463c8bc7f77
+      size: 319
     - path: src/train.py
       hash: md5
-      md5: 5a9cebe7d44b019cdd138db24fa1703d
-      size: 1120
+      md5: c7cd99b268da0edd68de573e0a59232d
+      size: 1122
     outs:
     - path: models/
       hash: md5
-      md5: 3078cf6a1413df2a19a2549507b50086.dir
-      size: 644089
+      md5: 663786e61832fa47105c2a68c686798b.dir
+      size: 3865529
       nfiles: 1
   evaluate:
     cmd: python src/evaluate.py
     deps:
     - path: models/
       hash: md5
-      md5: 3078cf6a1413df2a19a2549507b50086.dir
-      size: 644089
+      md5: 663786e61832fa47105c2a68c686798b.dir
+      size: 3865529
       nfiles: 1
     - path: params.yaml
       hash: md5
-      md5: 0573b806949b5eb6711d398c38b3724f
-      size: 318
+      md5: 30b3bed8a4ae45157b8f3463c8bc7f77
+      size: 319
     - path: src/evaluate.py
       hash: md5
-      md5: 173b7b82d51d2dbdf8241b7fbe71e1ee
-      size: 1017
+      md5: e6da068d871cd6fd3e5e9a21d80e6d51
+      size: 990
     outs:
-    - path: metrics/
+    - path: metrics
       hash: md5
-      md5: 59d86f8179ff627a3ccbdec806cec9b3.dir
+      md5: 7f12893a6385b6f479fe43a14199097e.dir
       size: 38
       nfiles: 1

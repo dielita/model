@@ -33,7 +33,7 @@ model = RandomForestClassifier(
 model.fit(X, y)
 
 # ---------- Save Model ----------
-model_filename = f"{model_params['type']}-{dataset_name}-{exp_id}.pkl"
+model_filename = f"{model_params['type']}--{dataset_name}--{exp_id}.pkl"
 save_path = os.path.join("models", model_filename)
 os.makedirs("models", exist_ok=True)
 

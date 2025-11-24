@@ -19,7 +19,7 @@ def get_exp_id():
 exp_id = get_exp_id()
 
 # Determine model name
-model_filename = f"{model_type}-{dataset_name}-{exp_id}.pkl"
+model_filename = f"{model_type}--{dataset_name}--{exp_id}.pkl"
 model_path = os.path.join("models", model_filename)
 
 model = joblib.load(model_path)
@@ -36,7 +36,7 @@ acc = accuracy_score(y, preds)
 
 # Save metrics
 os.makedirs("metrics", exist_ok=True)
-metrics_path = f"metrics/{model_filename.replace('.pkl', '.json')}"
+metrics_path = "metrics/evaluate.json"
 
 with open(metrics_path, "w") as f:
     json.dump({"accuracy": acc}, f, indent=2)

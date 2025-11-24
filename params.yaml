@@ -11,6 +11,6 @@ features:
   - Age
 model:
   type: random_forest
-  n_estimators: 150
-  max_depth: 5
-  random_state: 1
+  n_estimators: 300
+  max_depth: 9
+  random_state: 42
