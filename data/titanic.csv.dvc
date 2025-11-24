@@ -1,5 +1,12 @@
+md5: 8a3693c2292b0955c3fa48824270e51c
+frozen: true
+deps:
+- path: data/published/titanic.csv
+  repo:
+    url: https://github.com/dielita/DS
+    rev_lock: 2d09495361589121c0c5342c193828530727f694
 outs:
-- md5: 8bc3cb70c5e436849cbd56ee12d5ca1c
-  size: 34466
+- md5: e21b73f34506b5860eaed8240ff96d0c
+  size: 33580
   hash: md5
   path: titanic.csv
